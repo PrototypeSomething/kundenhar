@@ -6,22 +6,41 @@
 @import "tokens.css";
 @import "typography.module.css";
 
---color-1: blue;
+:root {
+    --md-elevation-level: 5;
+    --md-sys-color-shadow: #006A6A;
+  }
 
-body{
+body {
     margin: 0%;
 }
 
-#wrapper-index{
+.border {
+    border: #006A6A;
+    border-style: solid;
+    border-radius: 16px;
+    padding: 5px;
+}
+
+#wrapper-index {
     display: grid;
     grid-template-columns: 10vw, 20vw, 30vw, 20vw, 20vw;
-    grid-template-rows: 7.5vh ;
-    grid-template-areas: 
-    'nav nav nav nav nav'
+    grid-template-rows: 7.5vh;
+    grid-template-areas:
+        'nav nav nav nav nav'
+
     ;
 }
 
-.nav{
+.nav {
     grid-area: nav;
     font-family: var(--md-sys-typescale-display-large-font-family-name);
+    /* color: var(--md-sys-color-primary); */
+}
+
+.surface {
+    position: relative;
+    border-radius: 16px;
+    height: 64px;
+    width: 64px;
 }
