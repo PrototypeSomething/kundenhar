@@ -16,7 +16,7 @@ body {
 }
 
 .border {
-    border: #006A6A;
+    border: var(--md-sys-color-primary)/*#006A6A;*/
     border-style: solid;
     border-radius: 16px;
     padding: 5px;
@@ -24,12 +24,20 @@ body {
 
 #wrapper-index {
     display: grid;
-    grid-template-columns: 10vw, 20vw, 30vw, 20vw, 20vw;
-    grid-template-rows: 7.5vh;
+    grid-template-columns: 10vw 20vw 30vw 20vw 20vw;
+    grid-template-rows: 8.5vh 91.5vh;
     grid-template-areas:
         'nav nav nav nav nav'
+        'mn mn mn mn mn'
 
     ;
+}
+
+.main{
+    grid-area: mn;
+    font-family: MuseoModerno;
+    background-image: url(../img/gym.jpg);
+    background-repeat: no-repeat;
 }
 
 .nav {
