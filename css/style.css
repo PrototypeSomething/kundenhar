@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Roboto&display=swap');
 @import "colors.module.css";
 @import "theme.css";
 @import "theme.dark.css";
@@ -12,8 +13,31 @@
   }
 
 body {
-    margin: 0%;
+    margin: 0;
+    overflow-x: hidden;
 }
+
+.bn {
+    border-color: #000000;
+    border-radius: 3rem;
+    padding: 0.6em 2.3em;
+    cursor: pointer;
+    font-family: MuseoModerno;
+    font-weight: 900;
+    font-size: 1em;
+    color: #000000;
+    background-color: #32CD32;
+    background-image: linear-gradient(45deg, transparent 50%, var(--md-ref-palette-tertiary90) 50%);
+    background-position: 25%;
+    background-size: 400%;
+    -webkit-transition: background 500ms ease-in-out, color 500ms ease-in-out;
+    transition: background 500ms ease-in-out, color 500ms ease-in-out;
+  }
+  
+  .bn:hover {
+    color: #000000;
+    background-position: 100%;
+  }
 
 .border {
     border: var(--md-sys-color-primary)/*#006A6A;*/
@@ -25,25 +49,98 @@ body {
 #wrapper-index {
     display: grid;
     grid-template-columns: 10vw 20vw 30vw 20vw 20vw;
-    grid-template-rows: 8.5vh 91.5vh;
+    grid-template-rows: 68.5vh 80vh 10vh;
     grid-template-areas:
-        'nav nav nav nav nav'
         'mn mn mn mn mn'
-
+        'bd bd bd bd bd'
+        'ft ft ft ft ft'
     ;
 }
+
+main{
+    grid-area: bd;
+    margin: 5%;
+    background-color: var(--md-ref-palette-primary95);
+    border-radius: 5rem;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    'in im'
+    'tx im';
+    padding: 5%;
+}
+
 
 .main{
     grid-area: mn;
     font-family: MuseoModerno;
     background-image: url(../img/gym.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    object-fit: cover;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    padding: 100px 100px 50px 100px;
 }
 
-.nav {
+#shading{
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    margin: 50px;
+}
+
+#aboutUs{
+    grid-area: tx;
+    background-color: var(--md-ref-palette-tertiary90);
+    font-size: 1.2rem;
+    border-radius: 3rem;
+    padding: 10%;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+#aboutImage{
+    grid-area: im;
+    background-image: url(../img/dumbbell.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    border-radius: 3rem;
+    margin: 20% 10% 20% 10%;
+}
+
+h2{
+    font-family: Roboto;
+    text-decoration: underline;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav {
     grid-area: nav;
-    font-family: var(--md-sys-typescale-display-large-font-family-name);
-    /* color: var(--md-sys-color-primary); */
+    /* font-family: MuseoModerno; */
+    width: 75vw;
+    display: flex;
+    /* align-content: space-evenly; */
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    /* font-family: var(--md-sys-typescale-display-large-font-family-name); */
+    /* background-color: var(--md-source); */
+    position: absolute;
+    background-color: #32CD32;
+    border-radius: 3rem;
+}
+
+#Logo{
+    font-family: MuseoModerno;
 }
 
 .surface {
