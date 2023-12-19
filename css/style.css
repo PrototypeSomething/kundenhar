@@ -23,6 +23,8 @@ body {
     padding: 0.6em 2.3em;
     cursor: pointer;
     font-family: MuseoModerno;
+    width: 25vw;
+    height: 5vh;
     font-weight: 900;
     font-size: 1em;
     color: #000000;
@@ -49,12 +51,11 @@ body {
 #wrapper-index {
     display: grid;
     grid-template-columns: 10vw 20vw 30vw 20vw 20vw;
-    grid-template-rows: 68.5vh 80vh 10vh;
+    grid-template-rows: auto auto 10vh;
     grid-template-areas:
         'mn mn mn mn mn'
         'bd bd bd bd bd'
-        'ft ft ft ft ft'
-    ;
+        'ft ft ft ft ft';
 }
 
 main{
@@ -74,6 +75,7 @@ main{
 
 .main{
     grid-area: mn;
+    min-height: 60vh;
     font-family: MuseoModerno;
     background-image: url(../img/gym.jpg);
     background-repeat: no-repeat;
@@ -83,8 +85,10 @@ main{
     object-fit: cover;
     font-size: 3rem;
     text-align: center;
+    align-content: center;
     color: white;
-    padding: 100px 100px 50px 100px;
+    padding: 25vh 100px 50px 100px;
+    /* margin: 0px; */
 }
 
 #shading{
@@ -96,9 +100,11 @@ main{
 #aboutUs{
     grid-area: tx;
     background-color: var(--md-ref-palette-tertiary90);
+    font-family: Roboto;
     font-size: 1.2rem;
     border-radius: 3rem;
     padding: 10%;
+    margin: 0px 10% 20% 10px;
 }
 
 h3{
@@ -118,15 +124,15 @@ h3{
 
 h2{
     font-family: Roboto;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 2rem;
     text-align: center;
 }
 
 nav {
-    grid-area: nav;
     /* font-family: MuseoModerno; */
     width: 75vw;
+    max-height: 25px;
     display: flex;
     /* align-content: space-evenly; */
     justify-content: space-around;
@@ -135,6 +141,8 @@ nav {
     /* font-family: var(--md-sys-typescale-display-large-font-family-name); */
     /* background-color: var(--md-source); */
     position: absolute;
+    top: 10px;
+    left: 12.5vw;
     background-color: #32CD32;
     border-radius: 3rem;
 }
@@ -148,4 +156,9 @@ nav {
     border-radius: 16px;
     height: 64px;
     width: 64px;
+}
+
+footer{
+    grid-area: ft;
+    background-color: #32CD32;
 }
