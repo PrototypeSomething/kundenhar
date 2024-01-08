@@ -160,5 +160,29 @@ nav {
 
 footer{
     grid-area: ft;
+    display: flex;
+    flex-direction: column;
     background-color: #32CD32;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    
+}
+
+footer #socials{
+    display: block;
+    /* flex-direction: column; */
+    justify-content: space-around;
+
+}
+
+footer #contactUs{
+    display: block;
+}
+
+img{
+    width: 5vw;
+    margin-left: 0.75vw;
+    margin-right: 0.75vw;
 }
